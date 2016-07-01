@@ -1,0 +1,14 @@
+build/
+node_modules/
+.sass-cache/
+coverage/
+.idea/
+*.log
+.DS_Store
+.info
+.coveralls.yml
+.project
+config.rb
+*.iml
+xunit.xml
+.settings/
