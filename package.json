@@ -28,7 +28,9 @@
   "dependencies": {
     "biojs-io-snipspector": "0.0.8",
     "d3": "^3.5.17",
-    "jquery": "^2.1.4",
+    "jQuery": "^1.7.4",
+    "jquery": "^2.2.4",
+    "jquery-ui": "^1.12.0",
     "neo4j-driver": "^1.0.2",
     "underscore": "^1.8.3"
   },

@@ -4,6 +4,8 @@ var app = require("biojs-vis-RDFSchema");
 
 new app({el: yourDiv, name: 'biojs'});
 
+
+
 var p1 = new Promise(function(resolve, reject){
 	
 	var data = app.getData();
@@ -15,6 +17,7 @@ var p1 = new Promise(function(resolve, reject){
 .then(function(data){
 	console.log("visualize")
 	app.visualize(data);
+	//app.searchBox();
 });
 
 
