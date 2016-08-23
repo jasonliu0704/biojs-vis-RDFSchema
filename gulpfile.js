@@ -113,7 +113,7 @@ gulp.task('build-test',['init'], function() {
 });
 
 gulp.task('test-watch', function() {
-     gulp.watch(['./src/**/*.js','./lib/**/*.js', './test/**/*.js', './style/*.css'], ['test']);
+     gulp.watch(['./src/**/*.js', './snippets/simple.js', './lib/**/*.js', './test/**/*.js', './style/*.css'], ['test']);
 });
 
 //build tasks
