@@ -8,7 +8,7 @@ With this in mind, my project includes conducting researches on choosing the mos
 ## Project Progress
 Currently I have successfully built a parsor to parse the target dataset from sparql endpoints into neo4j database. The parsor supports full pipeline of parsing and store in neo4j db and is located at this repo(https://github.com/jasonliu0704/biojs-neo4j-dbsedd). The dbseed.py will seed the neo4j db for a given sparql endpoint while crawler.py will seed database with predefined filter. In addition, I have also worked on a parsor in java with similar functionalities.(https://github.com/jasonliu0704/linksets4RDF)
 
-After the midterm evaluation, I spend some of my time configing my local sparql endpoint instance using apache jena fuseki since the remote serve is not stable at that time. Most of my time was spent on figuring out how to filtering out targeting class to reduce the number of nodes to present and design and implement a suitable visualization. All the visualization is implemented according to the original design with a few exception (some feature will slow the visualization down when the dataset is large so I remove it). For targeting and parameterizating node to reduce traffic, there are two approach that has been implemented with some issues:
+After the midterm evaluation, I spend some of my time configing my local sparql endpoint instance using apache jena fuseki since the remote serve is not stable at that time. Most of my time was spent on figuring out how to filtering out targeting class to reduce the number of nodes to present and design and implement a suitable visualization. All the visualization is implemented according to the original design with a few exception (some feature will slow the visualization down when the dataset is large so I remove it). The visualization feature avaiblable:(hover on node to show detail, node and link label, collision dectection, node by type, search, node window fitting).For targeting and parameterizating node to reduce traffic, there are two approach that has been implemented with some issues:
 1. allow parameterizing throgh the python script before populating the database. drawback: not useful for interactive visualization becuase each request to sparql endpoint takes time to process.
 2. implement through front end by parsing input parameter and dynamically creating node and edges. This approache offers better performace but I encounterd 'Access-Control-Allow-Origin' issue which needs to be addressed on the sparql endpoint. See details at issues.
 
@@ -21,10 +21,11 @@ In the future, we need to work on Path finder part of this project.
 3. For the parser repo, recommend use python3 to install all the dependencies with pip (sparql, neo4j.v1, urlparse)
 4. run dbseed.py to parse and seed the neo4j database.
 5. in biojs-vis-RDFSchema, run npm install 
-6. run npm sniper to start the server and go to http://localhost:9090/snippets/simple
+6. run 'npm watch' to compile and run 'npm sniper' to start the server and go to http://localhost:9090/snippets/simple
 
 ## Demo
-Follow the how to run instruction and you will see a working demo.
+Demo is on the biojs register or fellow the link I hosted:
+http://acsweb.ucsd.edu/~jil271/demo/demo.html
 
 
 ## Issues
